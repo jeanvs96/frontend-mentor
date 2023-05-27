@@ -1,0 +1,118 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+}
+.card {
+    background-color: white;
+    width: 375px;
+    border-radius: .7rem;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.art-container .desktop{
+    display: none;
+}
+.art-container .mobile{
+    border-radius: .7rem .7rem 0 0;
+    max-width:100%;
+    max-height:100%;
+}
+.description-container {
+    font-size: 1rem;
+    padding: 1.5rem;
+    color: var(--Dark-grayish-blue);
+    line-height: 2rem;
+}
+.description-container .info h1{
+    font-family: "Fraunces", sans-serif;
+    color: black;
+}
+.description-container .info h3{
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+}
+.value {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.description-container .value .new{
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+    display: flex;
+}
+.description-container .value .old{
+    font-family: "Montserrat", sans-serif;
+    color: var(--Dark-grayish-blue);
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.btn button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--Dark-cyan);
+    color: white;
+    border: none;
+    border-radius: .7rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem
+}
+.btn button:hover {
+    background-color: hsl(158, 36%, 18%);
+}
+
+@media screen and (min-width: 640px){
+    .card {
+        background-color: white;
+        width: 650px;
+        border-radius: .7rem;
+    }
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .art-container {
+        width: 50%;
+    }
+    .description-container {
+        width: 50%;
+    }
+    .art-container .desktop{
+
+        display: block;
+        border-radius: .7rem 0 0 .7rem;
+        width: 100%;
+        height: 100%;
+    }
+    .art-container .mobile{
+        display: none;
+    }
+}
