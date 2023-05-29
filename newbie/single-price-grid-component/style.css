@@ -1,0 +1,128 @@
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sr-only {
+    display: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:  var(--Light-Gray);
+    color: var(--Grayish-Blue);
+    font-family: "Karla", sans-serif;
+}
+main {
+    width: 325px;
+    box-shadow: 0 0 14px 1px hsl(218, 22%, 83%);
+    border-radius: .4rem;
+}
+.community {
+    padding: 1.5rem;
+    background-color: white;
+    line-height: 1.5rem;
+    border-radius: .4rem .4rem 0 0;
+    padding-bottom: 2.5rem;
+}
+.community h3 {
+    color: var(--Cyan);
+}
+.community h4 {
+    color: var(--Bright-Yellow);
+}
+.community p {
+    font-size: .9rem;
+}
+.subscription {
+    padding: 1.5rem;
+    background-color: var(--Cyan);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5rem;
+}
+.sub-price {
+    display: flex;
+    gap: .8rem;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+.recurrence {
+    color: rgba(255, 255, 255, 0.4);
+
+}
+.price {
+    color: white;
+    font-size: 2rem;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.btn button {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    background-color: var(--Bright-Yellow);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem ;
+    border-radius: .4rem;
+    box-shadow: 0 0 14px 1px hsl(220, 3%, 56%);
+    cursor: pointer;
+}
+.whyus {
+    padding: 1.5rem;
+    background-color: hsl(179, 52%, 55%);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 .4rem .4rem;
+}
+.whyus ul {
+    color: rgba(255, 255, 255, 0.6);
+    list-style: none;
+    font-size: .9rem;
+    line-height: 1.25rem;
+}
+@media screen and (min-width: 650px) {
+    body {
+        
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 610px;
+    }
+    .community {
+        padding: 2rem;
+        min-width: 100%;
+    }
+    .community p {
+        font-size: .96rem;
+    }
+    .row-2 {
+        display: flex;
+        flex-direction: row;
+    }
+    .subscription {
+        padding: 2rem;
+        width: 50%;
+        border-radius: 0 0 0 .4rem;
+    }
+    .whyus {
+        padding: 2rem;
+        width: 50%;
+        border-radius: 0 0 .4rem 0;
+    }
+}
