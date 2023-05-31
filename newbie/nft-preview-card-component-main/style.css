@@ -1,0 +1,130 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-mainbg: hsl(217, 54%, 11%);
+    --Very-dark-blue-cardbg: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Very-dark-blue-mainbg);
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    color: var(--White);
+    
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.card {
+    width: 100%;
+    min-width: 300px;
+    max-width: 375px;
+    padding: 1rem;
+    background-color: var(--Very-dark-blue-cardbg);
+    border-radius: .5rem;
+}
+.art {
+    display: grid;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.art-piece {
+    grid-column-start: 1;
+    grid-row-start: 1;  
+    place-self: center;
+    width: 100%;
+    border-radius: .5rem;
+}
+.icon-view {
+    grid-column-start: 1;
+    grid-row-start: 1;  
+    place-self: center;
+    display: none;
+}
+.art:hover {
+    background-color: var(--Cyan);
+}
+.art:hover > .art-piece{
+    opacity: .6;
+}
+.art:hover > .icon-view{
+    display: block;
+    z-index: 1;
+}
+.description h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.description h1:hover {
+    color: var(--Cyan);
+}
+.description p {
+    color: var(--Soft-blue);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.price-time p {
+    display: inline;
+}
+.price-time {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+    margin-bottom: 1rem;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    color: var(--Cyan);
+    font-weight: 600;
+}
+.time {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    color: var(--Soft-blue);
+}
+.artist {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-pic {
+    width: 90%;
+}
+.artist p {
+    display: inline;
+}
+.name {
+    cursor: pointer;
+    color: var(--White);
+}
+.name:hover {
+    color: var(--Cyan);
+}
