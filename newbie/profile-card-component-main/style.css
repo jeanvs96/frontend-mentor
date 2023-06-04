@@ -1,0 +1,90 @@
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish--blue: hsl(227, 10%, 46%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top -345px left -63px, bottom -345px right -63px;
+    background-size: 50%, 50%;
+    font-family: "Kumbh Sans", sans-serif;
+    color: var(--Very-dark-desaturated-blue);
+    background-color: hsla(185, 75%, 39%, 0.639);
+}
+.card {
+    width: 100%;
+    min-width: 350px;
+    max-width: 350px;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 1rem 1rem 1rem hsla(229, 23%, 23%, 0.226);
+}
+.card-bg {
+    width: 100%;
+    height: 175px;
+    background: url("./images/bg-pattern-card.svg");
+    border-radius: 1rem 1rem 0 0;
+    opacity: .6;
+}
+.user-avatar {
+    margin: 0;
+    padding: 0;
+    width: 106px;
+    height: 106px;
+    position: relative;
+    top: -70px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-avatar img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
+.user-info {
+    margin-top: -4rem;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+.user-info h3 {
+    font-weight: 400;
+    color: var(--Dark-grayish--blue);
+}
+.age {
+    font-weight: 400;
+    color: var(--Dark-grayish--blue);
+}
+.stats {
+    border-top: 1px solid hsla(227, 10%, 46%, 0.224);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.8rem;
+}
+.stat p{
+    line-height: 1.5rem;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+    color:  var(--Dark-grayish--blue);
+}
