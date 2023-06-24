@@ -1,0 +1,143 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Violet);
+
+}
+
+.container {
+    width: 100%;
+    min-width: 375px;
+    max-width: 375px;
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+header img {
+    max-width: 120px;
+    display: block;
+}
+
+main {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1.02rem;
+}
+
+.info h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.illustration {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    margin-top: 1.5rem;
+    background-color: white;
+    width: 180px;
+    padding: .6rem;
+    border: none;
+    color: var(--Violet);
+    border-radius: 3rem;
+    cursor: pointer;
+    box-shadow: .05rem .1rem .4rem black;
+}
+.btn:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+.fa-brands {
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.fa-brands:hover {
+    color: var(--Soft-Magenta);
+}
+
+@media (min-width: 650px) {
+    body {
+        background-image: url(./images/bg-desktop.svg);
+        align-items: start;
+        min-width: 1280px;
+    }
+    .container {
+        width: 100%;
+        min-width: 1280px;
+        max-width: 1440px;
+        background-image: none;
+        gap: 0;
+        padding: 2rem 4rem;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+    header img {
+        max-width: 200px;
+    }
+
+    main {
+        display: flex;
+    }
+
+    .info {
+        margin-top: 3rem;
+        padding: 0 4rem;
+        font-size: 1.04rem;
+        text-align: left;
+    }
+
+    .info h1 {
+        font-size: 2rem;
+        padding-right: 3rem;
+    }
+
+    .illustration {
+        max-width: 60%;
+    }
+
+    footer {
+        margin-top: 0;
+        justify-content: right;
+        padding-right: 4rem;
+    }
+    
+    .btn {
+        height: 50px;
+    }
+}
